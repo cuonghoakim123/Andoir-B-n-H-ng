@@ -1,0 +1,62 @@
+[
+    {
+        "merged": "com.shopapp-mergeReleaseResources-65:/layout/fragment_cart.xml",
+        "source": "com.shopapp-main-67:/layout/fragment_cart.xml"
+    },
+    {
+        "merged": "com.shopapp-mergeReleaseResources-65:/layout/fragment_profile.xml",
+        "source": "com.shopapp-main-67:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "com.shopapp-mergeReleaseResources-65:/layout/item_cart.xml",
+        "source": "com.shopapp-main-67:/layout/item_cart.xml"
+    },
+    {
+        "merged": "com.shopapp-mergeReleaseResources-65:/layout/activity_auth.xml",
+        "source": "com.shopapp-main-67:/layout/activity_auth.xml"
+    },
+    {
+        "merged": "com.shopapp-mergeReleaseResources-65:/layout/activity_checkout.xml",
+        "source": "com.shopapp-main-67:/layout/activity_checkout.xml"
+    },
+    {
+        "merged": "com.shopapp-mergeReleaseResources-65:/layout/activity_my_orders.xml",
+        "source": "com.shopapp-main-67:/layout/activity_my_orders.xml"
+    },
+    {
+        "merged": "com.shopapp-mergeReleaseResources-65:/layout/activity_edit_profile.xml",
+        "source": "com.shopapp-main-67:/layout/activity_edit_profile.xml"
+    },
+    {
+        "merged": "com.shopapp-mergeReleaseResources-65:/layout/fragment_home.xml",
+        "source": "com.shopapp-main-67:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.shopapp-mergeReleaseResources-65:/layout/fragment_categories.xml",
+        "source": "com.shopapp-main-67:/layout/fragment_categories.xml"
+    },
+    {
+        "merged": "com.shopapp-mergeReleaseResources-65:/layout/item_order.xml",
+        "source": "com.shopapp-main-67:/layout/item_order.xml"
+    },
+    {
+        "merged": "com.shopapp-mergeReleaseResources-65:/layout/activity_main.xml",
+        "source": "com.shopapp-main-67:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.shopapp-mergeReleaseResources-65:/layout/activity_payment.xml",
+        "source": "com.shopapp-main-67:/layout/activity_payment.xml"
+    },
+    {
+        "merged": "com.shopapp-mergeReleaseResources-65:/layout/item_category.xml",
+        "source": "com.shopapp-main-67:/layout/item_category.xml"
+    },
+    {
+        "merged": "com.shopapp-mergeReleaseResources-65:/layout/activity_product_detail.xml",
+        "source": "com.shopapp-main-67:/layout/activity_product_detail.xml"
+    },
+    {
+        "merged": "com.shopapp-mergeReleaseResources-65:/layout/item_product.xml",
+        "source": "com.shopapp-main-67:/layout/item_product.xml"
+    }
+]

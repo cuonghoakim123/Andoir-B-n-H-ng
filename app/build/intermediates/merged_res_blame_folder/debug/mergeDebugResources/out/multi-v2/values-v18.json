@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.shopapp-mergeDebugResources-64:/values-v18/values-v18.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\cuong\\.gradle\\caches\\transforms-4\\796e52847316597d0f01520d0e819327\\transformed\\appcompat-1.6.1\\res\\values-v18\\values-v18.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "48",
+                        "endOffsets": "99"
+                    }
+                }
+            ]
+        }
+    ]
+}

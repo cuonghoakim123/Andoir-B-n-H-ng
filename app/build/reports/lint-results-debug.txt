@@ -1,0 +1,968 @@
+C:\laragon\www\apk andoir bán hàng\app\src\main\AndroidManifest.xml:10: Warning: WRITE_EXTERNAL_STORAGE is deprecated (and is not granted) when targeting Android 13+. If you need to write to shared storage, use the MediaStore.createWriteRequest intent. [ScopedStorage]
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\AndroidManifest.xml:11: Warning: READ_EXTERNAL_STORAGE is deprecated (and is not granted) when targeting Android 13+. If you need to query or interact with MediaStore or media files on the shared storage, you should instead use one or more new storage permissions: READ_MEDIA_IMAGES, READ_MEDIA_VIDEO or READ_MEDIA_AUDIO. [ScopedStorage]
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "ScopedStorage":
+   Scoped storage is enforced on Android 10+ (or Android 11+ if using
+   requestLegacyExternalStorage). In particular, WRITE_EXTERNAL_STORAGE will
+   no longer provide write access to all files; it will provide the equivalent
+   of READ_EXTERNAL_STORAGE instead.
+
+   As of Android 13, if you need to query or interact with MediaStore or media
+   files on the shared storage, you should be using instead one or more new
+   storage permissions:
+   * android.permission.READ_MEDIA_IMAGES
+   * android.permission.READ_MEDIA_VIDEO
+   * android.permission.READ_MEDIA_AUDIO
+
+   and then add maxSdkVersion="33" to the older permission. See the developer
+   guide for how to do this:
+   https://developer.android.com/about/versions/13/behavior-changes-13#granula
+   r-media-permissions
+
+   The MANAGE_EXTERNAL_STORAGE permission can be used to manage all files, but
+   it is rarely necessary and most apps on Google Play are not allowed to use
+   it. Most apps should instead migrate to use scoped storage. To modify or
+   delete files, apps should request write access from the user as described
+   at https://goo.gle/android-mediastore-createwriterequest.
+
+   To learn more, read these resources: Play policy:
+   https://goo.gle/policy-storage-help Allowable use cases:
+   https://goo.gle/policy-storage-usecases
+
+   https://goo.gle/android-storage-usecases
+
+C:\laragon\www\apk andoir bán hàng\app\build.gradle:16: Warning: Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details. [OldTargetApi]
+        targetSdk 34
+        ~~~~~~~~~~~~
+
+   Explanation for issues of type "OldTargetApi":
+   When your application runs on a version of Android that is more recent than
+   your targetSdkVersion specifies that it has been tested with, various
+   compatibility modes kick in. This ensures that your application continues
+   to work, but it may look out of place. For example, if the targetSdkVersion
+   is less than 14, your app may get an option button in the UI.
+
+   To fix this issue, set the targetSdkVersion to the highest available value.
+   Then test your app to make sure everything works correctly. You may want to
+   consult the compatibility notes to see what changes apply to each version
+   you are adding support for:
+   https://developer.android.com/reference/android/os/Build.VERSION_CODES.html
+   as well as follow this guide:
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.
+   html
+
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.html
+
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_main.xml:20: Warning: Replace the <fragment> tag with FragmentContainerView. [FragmentTagUsage from androidx.fragment]
+    <fragment
+     ~~~~~~~~
+
+   Explanation for issues of type "FragmentTagUsage":
+   FragmentContainerView replaces the <fragment> tag as the preferred         
+          way of adding fragments via XML. Unlike the <fragment> tag,
+   FragmentContainerView                 uses a normal FragmentTransaction
+   under the hood to add the initial fragment,                 allowing
+   further FragmentTransaction operations on the FragmentContainerView        
+           and providing a consistent timing for lifecycle events.
+
+   https://developer.android.com/reference/androidx/fragment/app/FragmentContainerView.html
+
+   Vendor: Android Open Source Project
+   Identifier: androidx.fragment
+   Feedback: https://issuetracker.google.com/issues/new?component=460964
+
+C:\laragon\www\apk andoir bán hàng\app\build.gradle:43: Warning: A newer version of androidx.core:core-ktx than 1.12.0 is available: 1.16.0 [GradleDependency]
+    implementation 'androidx.core:core-ktx:1.12.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\build.gradle:44: Warning: A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.0 [GradleDependency]
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\build.gradle:45: Warning: A newer version of com.google.android.material:material than 1.11.0 is available: 1.12.0 [GradleDependency]
+    implementation 'com.google.android.material:material:1.11.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\build.gradle:46: Warning: A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.1 [GradleDependency]
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\build.gradle:49: Warning: A newer version of androidx.navigation:navigation-fragment-ktx than 2.7.6 is available: 2.9.0 [GradleDependency]
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.7.6'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\build.gradle:50: Warning: A newer version of androidx.navigation:navigation-ui-ktx than 2.7.6 is available: 2.9.0 [GradleDependency]
+    implementation 'androidx.navigation:navigation-ui-ktx:2.7.6'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\build.gradle:53: Warning: A newer version of androidx.lifecycle:lifecycle-viewmodel-ktx than 2.7.0 is available: 2.9.0 [GradleDependency]
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\build.gradle:54: Warning: A newer version of androidx.lifecycle:lifecycle-livedata-ktx than 2.7.0 is available: 2.9.0 [GradleDependency]
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.7.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\build.gradle:57: Warning: A newer version of com.google.firebase:firebase-bom than 32.7.0 is available: 33.14.0 [GradleDependency]
+    implementation platform('com.google.firebase:firebase-bom:32.7.0')
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\build.gradle:73: Warning: A newer version of androidx.recyclerview:recyclerview than 1.3.2 is available: 1.4.0 [GradleDependency]
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\build.gradle:82: Warning: A newer version of androidx.room:room-runtime than 2.6.1 is available: 2.7.1 [GradleDependency]
+    implementation 'androidx.room:room-runtime:2.6.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\build.gradle:83: Warning: A newer version of androidx.room:room-ktx than 2.6.1 is available: 2.7.1 [GradleDependency]
+    implementation 'androidx.room:room-ktx:2.6.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\build.gradle:84: Warning: A newer version of androidx.room:room-compiler than 2.6.1 is available: 2.7.1 [GradleDependency]
+    kapt 'androidx.room:room-compiler:2.6.1'
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\build.gradle:101: Warning: A newer version of androidx.test.ext:junit than 1.1.5 is available: 1.2.1 [GradleDependency]
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\build.gradle:102: Warning: A newer version of androidx.test.espresso:espresso-core than 3.5.1 is available: 3.6.1 [GradleDependency]
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\build.gradle:105: Warning: A newer version of androidx.room:room-testing than 2.6.1 is available: 2.7.1 [GradleDependency]
+    testImplementation 'androidx.room:room-testing:2.6.1'
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_cart.xml:19: Warning: This tag and its children can be replaced by one <TextView/> and a compound drawable [UseCompoundDrawables]
+    <LinearLayout
+     ~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_home.xml:21: Warning: This tag and its children can be replaced by one <TextView/> and a compound drawable [UseCompoundDrawables]
+            <LinearLayout
+             ~~~~~~~~~~~~
+
+   Explanation for issues of type "UseCompoundDrawables":
+   A LinearLayout which contains an ImageView and a TextView can be more
+   efficiently handled as a compound drawable (a single TextView, using the
+   drawableTop, drawableLeft, drawableRight and/or drawableBottom attributes
+   to draw one or more images adjacent to the text).
+
+   If the two widgets are offset from each other with margins, this can be
+   replaced with a drawablePadding attribute.
+
+   There's a lint quickfix to perform this conversion in the Eclipse plugin.
+
+C:\laragon\www\apk andoir bán hàng\app\build.gradle:70: Warning: This library supports using KSP instead of kapt, which greatly improves performance. Learn more: https://developer.android.com/studio/build/migrate-to-ksp [KaptUsageInsteadOfKsp]
+    kapt 'com.github.bumptech.glide:compiler:4.16.0'
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\build.gradle:84: Warning: This library supports using KSP instead of kapt, which greatly improves performance. Learn more: https://developer.android.com/studio/build/migrate-to-ksp [KaptUsageInsteadOfKsp]
+    kapt 'androidx.room:room-compiler:2.6.1'
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "KaptUsageInsteadOfKsp":
+   KSP is a more efficient replacement for kapt. For libraries that support
+   both, KSP should be used to improve build times.
+
+   https://developer.android.com/studio/build/migrate-to-ksp
+
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_auth.xml:7: Warning: Possible overdraw: Root element paints background @color/background with a theme that also paints a background (inferred theme is @style/Theme.ShopApp) [Overdraw]
+    android:background="@color/background">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_checkout.xml:6: Warning: Possible overdraw: Root element paints background @color/background_color with a theme that also paints a background (inferred theme is @style/Theme.ShopApp) [Overdraw]
+    android:background="@color/background_color">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_edit_profile.xml:7: Warning: Possible overdraw: Root element paints background @color/background_color with a theme that also paints a background (inferred theme is @style/Theme.ShopApp) [Overdraw]
+    android:background="@color/background_color">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_my_orders.xml:7: Warning: Possible overdraw: Root element paints background @color/background_color with a theme that also paints a background (inferred theme is @style/Theme.ShopApp) [Overdraw]
+    android:background="@color/background_color">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_payment.xml:6: Warning: Possible overdraw: Root element paints background @color/background_color with a theme that also paints a background (inferred theme is @style/Theme.ShopApp) [Overdraw]
+    android:background="@color/background_color"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_product_detail.xml:7: Warning: Possible overdraw: Root element paints background @color/background_color with a theme that also paints a background (inferred theme is @style/Theme.ShopApp) [Overdraw]
+    android:background="@color/background_color">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_cart.xml:6: Warning: Possible overdraw: Root element paints background @color/background with a theme that also paints a background (inferred theme is @style/Theme.ShopApp) [Overdraw]
+    android:background="@color/background"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_categories.xml:5: Warning: Possible overdraw: Root element paints background @color/background with a theme that also paints a background (inferred theme is @style/Theme.ShopApp) [Overdraw]
+    android:background="@color/background"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_home.xml:6: Warning: Possible overdraw: Root element paints background @color/background with a theme that also paints a background (inferred theme is @style/Theme.ShopApp) [Overdraw]
+    android:background="@color/background">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_profile.xml:6: Warning: Possible overdraw: Root element paints background @color/background with a theme that also paints a background (inferred theme is @style/Theme.ShopApp) [Overdraw]
+    android:background="@color/background">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "Overdraw":
+   If you set a background drawable on a root view, then you should use a
+   custom theme where the theme background is null. Otherwise, the theme
+   background will be painted first, only to have your custom background
+   completely cover it; this is called "overdraw".
+
+   NOTE: This detector relies on figuring out which layouts are associated
+   with which activities based on scanning the Java code, and it's currently
+   doing that using an inexact pattern matching algorithm. Therefore, it can
+   incorrectly conclude which activity the layout is associated with and then
+   wrongly complain that a background-theme is hidden.
+
+   If you want your custom background on multiple pages, then you should
+   consider making a custom theme with your custom background and just using
+   that theme instead of a root element background.
+
+   Of course it's possible that your custom drawable is translucent and you
+   want it to be mixed with the background. However, you will get better
+   performance if you pre-mix the background with your drawable and use that
+   resulting image or color as a custom theme background instead.
+
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\colors.xml:3: Warning: The resource R.color.purple_200 appears to be unused [UnusedResources]
+    <color name="purple_200">#FFBB86FC</color>
+           ~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\colors.xml:4: Warning: The resource R.color.purple_500 appears to be unused [UnusedResources]
+    <color name="purple_500">#FF6200EE</color>
+           ~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\colors.xml:5: Warning: The resource R.color.purple_700 appears to be unused [UnusedResources]
+    <color name="purple_700">#FF3700B3</color>
+           ~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\colors.xml:6: Warning: The resource R.color.teal_200 appears to be unused [UnusedResources]
+    <color name="teal_200">#FF03DAC5</color>
+           ~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\colors.xml:7: Warning: The resource R.color.teal_700 appears to be unused [UnusedResources]
+    <color name="teal_700">#FF018786</color>
+           ~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\colors.xml:8: Warning: The resource R.color.black appears to be unused [UnusedResources]
+    <color name="black">#FF000000</color>
+           ~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\colors.xml:16: Warning: The resource R.color.surface appears to be unused [UnusedResources]
+    <color name="surface">#FFFFFFFF</color>
+           ~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\colors.xml:19: Warning: The resource R.color.warning appears to be unused [UnusedResources]
+    <color name="warning">#FFFF9800</color>
+           ~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\colors.xml:28: Warning: The resource R.color.card_shadow appears to be unused [UnusedResources]
+    <color name="card_shadow">#1F000000</color>
+           ~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\colors.xml:32: Warning: The resource R.color.button_secondary appears to be unused [UnusedResources]
+    <color name="button_secondary">#FFE0E0E0</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\colors.xml:34: Warning: The resource R.color.button_text_secondary appears to be unused [UnusedResources]
+    <color name="button_text_secondary">#FF212121</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\strings.xml:11: Warning: The resource R.string.login appears to be unused [UnusedResources]
+    <string name="login">Đăng nhập</string>
+            ~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\strings.xml:12: Warning: The resource R.string.register appears to be unused [UnusedResources]
+    <string name="register">Đăng ký</string>
+            ~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\strings.xml:15: Warning: The resource R.string.confirm_password appears to be unused [UnusedResources]
+    <string name="confirm_password">Xác nhận mật khẩu</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\strings.xml:18: Warning: The resource R.string.forgot_password appears to be unused [UnusedResources]
+    <string name="forgot_password">Quên mật khẩu?</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\strings.xml:19: Warning: The resource R.string.dont_have_account appears to be unused [UnusedResources]
+    <string name="dont_have_account">Chưa có tài khoản?</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\strings.xml:20: Warning: The resource R.string.already_have_account appears to be unused [UnusedResources]
+    <string name="already_have_account">Đã có tài khoản?</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\strings.xml:23: Warning: The resource R.string.add_to_cart appears to be unused [UnusedResources]
+    <string name="add_to_cart">Thêm vào giỏ</string>
+            ~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\strings.xml:24: Warning: The resource R.string.buy_now appears to be unused [UnusedResources]
+    <string name="buy_now">Mua ngay</string>
+            ~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\strings.xml:25: Warning: The resource R.string.price appears to be unused [UnusedResources]
+    <string name="price">Giá:</string>
+            ~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\strings.xml:26: Warning: The resource R.string.description appears to be unused [UnusedResources]
+    <string name="description">Mô tả</string>
+            ~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\strings.xml:27: Warning: The resource R.string.quantity appears to be unused [UnusedResources]
+    <string name="quantity">Số lượng</string>
+            ~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\strings.xml:28: Warning: The resource R.string.in_stock appears to be unused [UnusedResources]
+    <string name="in_stock">Còn hàng</string>
+            ~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\strings.xml:29: Warning: The resource R.string.out_of_stock appears to be unused [UnusedResources]
+    <string name="out_of_stock">Hết hàng</string>
+            ~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\strings.xml:35: Warning: The resource R.string.remove appears to be unused [UnusedResources]
+    <string name="remove">Xóa</string>
+            ~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\strings.xml:40: Warning: The resource R.string.address appears to be unused [UnusedResources]
+    <string name="address">Địa chỉ</string>
+            ~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\strings.xml:44: Warning: The resource R.string.order_status_pending appears to be unused [UnusedResources]
+    <string name="order_status_pending">Chờ xử lý</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\strings.xml:45: Warning: The resource R.string.order_status_confirmed appears to be unused [UnusedResources]
+    <string name="order_status_confirmed">Đã xác nhận</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\strings.xml:46: Warning: The resource R.string.order_status_shipping appears to be unused [UnusedResources]
+    <string name="order_status_shipping">Đang giao</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\strings.xml:47: Warning: The resource R.string.order_status_delivered appears to be unused [UnusedResources]
+    <string name="order_status_delivered">Đã giao</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\strings.xml:48: Warning: The resource R.string.order_status_cancelled appears to be unused [UnusedResources]
+    <string name="order_status_cancelled">Đã hủy</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\strings.xml:51: Warning: The resource R.string.save appears to be unused [UnusedResources]
+    <string name="save">Lưu</string>
+            ~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\strings.xml:52: Warning: The resource R.string.cancel appears to be unused [UnusedResources]
+    <string name="cancel">Hủy</string>
+            ~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\strings.xml:53: Warning: The resource R.string.ok appears to be unused [UnusedResources]
+    <string name="ok">OK</string>
+            ~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\strings.xml:54: Warning: The resource R.string.error appears to be unused [UnusedResources]
+    <string name="error">Lỗi</string>
+            ~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\strings.xml:55: Warning: The resource R.string.loading appears to be unused [UnusedResources]
+    <string name="loading">Đang tải...</string>
+            ~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\strings.xml:57: Warning: The resource R.string.filter appears to be unused [UnusedResources]
+    <string name="filter">Lọc</string>
+            ~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\strings.xml:58: Warning: The resource R.string.sort appears to be unused [UnusedResources]
+    <string name="sort">Sắp xếp</string>
+            ~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\themes.xml:23: Warning: The resource R.style.Theme_ShopApp_AppBarOverlay appears to be unused [UnusedResources]
+    <style name="Theme.ShopApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\themes.xml:25: Warning: The resource R.style.Theme_ShopApp_PopupOverlay appears to be unused [UnusedResources]
+    <style name="Theme.ShopApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\themes.xml:36: Warning: The resource R.style.ButtonSecondary appears to be unused [UnusedResources]
+    <style name="ButtonSecondary" parent="Widget.Material3.Button.OutlinedButton">
+           ~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\themes.xml:52: Warning: The resource R.style.TextTitle appears to be unused [UnusedResources]
+    <style name="TextTitle" parent="TextAppearance.Material3.HeadlineSmall">
+           ~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\themes.xml:57: Warning: The resource R.style.TextSubtitle appears to be unused [UnusedResources]
+    <style name="TextSubtitle" parent="TextAppearance.Material3.BodyLarge">
+           ~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\themes.xml:61: Warning: The resource R.style.TextPrice appears to be unused [UnusedResources]
+    <style name="TextPrice" parent="TextAppearance.Material3.HeadlineSmall">
+           ~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests =true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests =true.
+   ,
+
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\values\strings.xml:55: Warning: Replace "..." with ellipsis character (…, &#8230;) ? [TypographyEllipsis]
+    <string name="loading">Đang tải...</string>
+                           ~~~~~~~~~~~
+
+   Explanation for issues of type "TypographyEllipsis":
+   You can replace the string "..." with a dedicated ellipsis character,
+   ellipsis character (u2026, &#8230;). This can help make the text more
+   readable.
+
+   https://en.wikipedia.org/wiki/Ellipsis
+
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_product_detail.xml:253: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+            <Button
+             ~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_product_detail.xml:265: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+            <Button
+             ~~~~~~
+
+   Explanation for issues of type "ButtonStyle":
+   Button bars typically use a borderless style for the buttons. Set the
+   style="?android:attr/buttonBarButtonStyle" attribute on each of the
+   buttons, and set style="?android:attr/buttonBarStyle" on the parent layout
+
+   https://d.android.com/r/studio-ui/designer/material/dialogs
+
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_checkout.xml:119: Warning: This text field does not specify an inputType [TextFields]
+            <EditText
+             ~~~~~~~~
+
+   Explanation for issues of type "TextFields":
+   Providing an inputType attribute on a text field improves usability because
+   depending on the data to be input, optimized keyboards can be shown to the
+   user (such as just digits and parentheses for a phone number). 
+
+   The lint detector also looks at the id of the view, and if the id offers a
+   hint of the purpose of the field (for example, the id contains the phrase
+   phone or email), then lint will also ensure that the inputType contains the
+   corresponding type attributes.
+
+   If you really want to keep the text field generic, you can suppress this
+   warning by setting inputType="text".
+
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_checkout.xml:119: Warning: Missing autofillHints attribute [Autofill]
+            <EditText
+             ~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_checkout.xml:129: Warning: Missing autofillHints attribute [Autofill]
+            <EditText
+             ~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_checkout.xml:140: Warning: Missing autofillHints attribute [Autofill]
+            <EditText
+             ~~~~~~~~
+
+   Explanation for issues of type "Autofill":
+   Specify an autofillHints attribute when targeting SDK version 26 or higher
+   or explicitly specify that the view is not important for autofill. Your app
+   can help an autofill service classify the data correctly by providing the
+   meaning of each view that could be autofillable, such as views representing
+   usernames, passwords, credit card fields, email addresses, etc.
+
+   The hints can have any value, but it is recommended to use predefined
+   values like 'username' for a username or 'creditCardNumber' for a credit
+   card number. For a list of all predefined autofill hint constants, see the
+   AUTOFILL_HINT_ constants in the View reference at
+   https://developer.android.com/reference/android/view/View.html.
+
+   You can mark a view unimportant for autofill by specifying an
+   importantForAutofill attribute on that view or a parent view. See
+   https://developer.android.com/reference/android/view/View.html#setImportant
+   ForAutofill(int).
+
+   https://developer.android.com/guide/topics/text/autofill.html
+
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_auth.xml:14: Warning: Missing contentDescription attribute on image [ContentDescription]
+        <ImageView
+         ~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_checkout.xml:20: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageButton
+             ~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_checkout.xml:49: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_edit_profile.xml:18: Warning: Missing contentDescription attribute on image [ContentDescription]
+        <ImageButton
+         ~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_my_orders.xml:18: Warning: Missing contentDescription attribute on image [ContentDescription]
+        <ImageButton
+         ~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_my_orders.xml:66: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_payment.xml:16: Warning: Missing contentDescription attribute on image [ContentDescription]
+        <ImageButton
+         ~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_payment.xml:135: Warning: Missing contentDescription attribute on image [ContentDescription]
+                        <ImageView
+                         ~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_payment.xml:167: Warning: Missing contentDescription attribute on image [ContentDescription]
+                        <ImageView
+                         ~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_payment.xml:199: Warning: Missing contentDescription attribute on image [ContentDescription]
+                        <ImageView
+                         ~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_payment.xml:231: Warning: Missing contentDescription attribute on image [ContentDescription]
+                        <ImageView
+                         ~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_payment.xml:263: Warning: Missing contentDescription attribute on image [ContentDescription]
+                <ImageView
+                 ~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_product_detail.xml:21: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageButton
+             ~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_product_detail.xml:48: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_product_detail.xml:206: Warning: Missing contentDescription attribute on image [ContentDescription]
+                <ImageButton
+                 ~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_product_detail.xml:223: Warning: Missing contentDescription attribute on image [ContentDescription]
+                <ImageButton
+                 ~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_cart.xml:28: Warning: Missing contentDescription attribute on image [ContentDescription]
+        <ImageView
+         ~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_home.xml:28: Warning: Missing contentDescription attribute on image [ContentDescription]
+                <ImageView
+                 ~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_home.xml:56: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_profile.xml:30: Warning: Missing contentDescription attribute on image [ContentDescription]
+                <ImageView
+                 ~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_profile.xml:162: Warning: Missing contentDescription attribute on image [ContentDescription]
+                <ImageView
+                 ~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_profile.xml:177: Warning: Missing contentDescription attribute on image [ContentDescription]
+                <ImageView
+                 ~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_profile.xml:203: Warning: Missing contentDescription attribute on image [ContentDescription]
+                <ImageView
+                 ~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_profile.xml:218: Warning: Missing contentDescription attribute on image [ContentDescription]
+                <ImageView
+                 ~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_profile.xml:244: Warning: Missing contentDescription attribute on image [ContentDescription]
+                <ImageView
+                 ~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_profile.xml:259: Warning: Missing contentDescription attribute on image [ContentDescription]
+                <ImageView
+                 ~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_profile.xml:285: Warning: Missing contentDescription attribute on image [ContentDescription]
+                <ImageView
+                 ~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_profile.xml:300: Warning: Missing contentDescription attribute on image [ContentDescription]
+                <ImageView
+                 ~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\item_cart.xml:17: Warning: Missing contentDescription attribute on image [ContentDescription]
+        <ImageView
+         ~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\item_cart.xml:65: Warning: Missing contentDescription attribute on image [ContentDescription]
+                    <ImageButton
+                     ~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\item_cart.xml:83: Warning: Missing contentDescription attribute on image [ContentDescription]
+                    <ImageButton
+                     ~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\item_cart.xml:111: Warning: Missing contentDescription attribute on image [ContentDescription]
+        <ImageButton
+         ~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\item_category.xml:18: Warning: Missing contentDescription attribute on image [ContentDescription]
+        <ImageView
+         ~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\item_order.xml:73: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\item_product.xml:20: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+
+   Explanation for issues of type "ContentDescription":
+   Non-textual widgets like ImageViews and ImageButtons should use the
+   contentDescription attribute to specify a textual description of the widget
+   such that screen readers and other accessibility tools can adequately
+   describe the user interface.
+
+   Note that elements in application screens that are purely decorative and do
+   not provide any content or enable a user action should not have
+   accessibility content descriptions. In this case, set their descriptions to
+   @null. If your app's minSdkVersion is 16 or higher, you can instead set
+   these graphical elements' android:importantForAccessibility attributes to
+   no.
+
+   Note that for text fields, you should not set both the hint and the
+   contentDescription attributes since the hint will never be shown. Just set
+   the hint.
+
+   https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases
+
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\auth\AuthActivity.kt:38: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            binding.titleText.text = "Đăng nhập"
+                                      ~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\auth\AuthActivity.kt:39: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            binding.authButton.text = "Đăng nhập"
+                                       ~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\auth\AuthActivity.kt:40: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            binding.switchModeText.text = "Chưa có tài khoản? Đăng ký"
+                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\auth\AuthActivity.kt:44: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            binding.titleText.text = "Đăng ký"
+                                      ~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\auth\AuthActivity.kt:45: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            binding.authButton.text = "Đăng ký"
+                                       ~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\auth\AuthActivity.kt:46: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            binding.switchModeText.text = "Đã có tài khoản? Đăng nhập"
+                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\home\CategoryAdapter.kt:37: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                productCount.text = "${category.productCount} sản phẩm"
+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\home\CategoryAdapter.kt:37: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                productCount.text = "${category.productCount} sản phẩm"
+                                                             ~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\checkout\CheckoutActivity.kt:54: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            productQuantity.text = "x${quantity}"
+                                   ~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\checkout\CheckoutActivity.kt:69: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            customerName.setText("Nguyễn Văn A")
+                                  ~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\checkout\CheckoutActivity.kt:70: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            customerPhone.setText("0123456789")
+                                   ~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\checkout\CheckoutActivity.kt:71: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            deliveryAddress.setText("123 Đường ABC, Quận 1, TP.HCM")
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\profile\OrdersAdapter.kt:40: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                orderNumber.text = "Đơn hàng #${order.orderNumber}"
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\profile\OrdersAdapter.kt:40: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                orderNumber.text = "Đơn hàng #${order.orderNumber}"
+                                    ~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\profile\OrdersAdapter.kt:57: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                orderItems.text = "Xem chi tiết"
+                                   ~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\profile\OrdersAdapter.kt:58: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                firstItemName.text = "Đơn hàng #${order.orderNumber}"
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\profile\OrdersAdapter.kt:58: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                firstItemName.text = "Đơn hàng #${order.orderNumber}"
+                                      ~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\payment\PaymentActivity.kt:102: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        binding.payButton.text = "Đang xử lý..."
+                                  ~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\payment\PaymentActivity.kt:131: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                        binding.payButton.text = "Thanh toán"
+                                                  ~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\payment\PaymentActivity.kt:196: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        binding.payButton.text = "Đang xử lý..."
+                                  ~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\payment\PaymentActivity.kt:213: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        binding.payButton.text = "Thanh toán"
+                                  ~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\home\ProductAdapter.kt:44: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                    discountBadge.text = "-${product.discountPercentage}%"
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\home\ProductAdapter.kt:52: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                reviewCount.text = "(${product.reviewCount})"
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\product\ProductDetailActivity.kt:56: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            productRatingText.text = "(${product.reviewCount} đánh giá)"
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\product\ProductDetailActivity.kt:56: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            productRatingText.text = "(${product.reviewCount} đánh giá)"
+                                                             ~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\product\ProductDetailActivity.kt:57: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            productStock.text = "Còn lại: ${product.stock} sản phẩm"
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\product\ProductDetailActivity.kt:57: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            productStock.text = "Còn lại: ${product.stock} sản phẩm"
+                                                          ~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\product\ProductDetailActivity.kt:65: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                discountBadge.text = "-${product.discountPercent.toInt()}%"
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\product\ProductDetailActivity.kt:122: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        binding.totalPrice.text = "Tổng: ${formatPrice(totalPrice)}"
+                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\product\ProductDetailActivity.kt:122: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        binding.totalPrice.text = "Tổng: ${formatPrice(totalPrice)}"
+                                   ~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\profile\ProfileFragment.kt:115: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                userName.text = "Khách"
+                                 ~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\profile\ProfileFragment.kt:116: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                userEmail.text = "Vui lòng đăng nhập"
+                                  ~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\profile\ProfileFragment.kt:117: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                userPhone.text = "Chưa cập nhật"
+                                  ~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\java\com\shopapp\ui\profile\ProfileFragment.kt:118: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                userAddress.text = "Chưa cập nhật"
+                                    ~~~~~~~~~~~~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
+
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_auth.xml:30: Warning: Hardcoded string "Đăng nhập", should use @string resource [HardcodedText]
+            android:text="Đăng nhập"
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_auth.xml:120: Warning: Hardcoded string "Đăng nhập", should use @string resource [HardcodedText]
+            android:text="Đăng nhập"
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_auth.xml:131: Warning: Hardcoded string "Chưa có tài khoản? Đăng ký", should use @string resource [HardcodedText]
+            android:text="Chưa có tài khoản? Đăng ký"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_checkout.xml:34: Warning: Hardcoded string "Đặt hàng", should use @string resource [HardcodedText]
+                android:text="Đặt hàng"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_checkout.xml:67: Warning: Hardcoded string "iPhone 15 Pro Max 256GB", should use @string resource [HardcodedText]
+                    android:text="iPhone 15 Pro Max 256GB"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_checkout.xml:82: Warning: Hardcoded string "29.990.000 đ", should use @string resource [HardcodedText]
+                        android:text="29.990.000 đ"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_checkout.xml:92: Warning: Hardcoded string "x1", should use @string resource [HardcodedText]
+                        android:text="x1"
+                        ~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_checkout.xml:114: Warning: Hardcoded string "Thông tin giao hàng", should use @string resource [HardcodedText]
+                android:text="Thông tin giao hàng"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_checkout.xml:125: Warning: Hardcoded string "Họ và tên", should use @string resource [HardcodedText]
+                android:hint="Họ và tên"
+                ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_checkout.xml:135: Warning: Hardcoded string "Số điện thoại", should use @string resource [HardcodedText]
+                android:hint="Số điện thoại"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_checkout.xml:147: Warning: Hardcoded string "Địa chỉ giao hàng", should use @string resource [HardcodedText]
+                android:hint="Địa chỉ giao hàng"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_checkout.xml:167: Warning: Hardcoded string "Phương thức thanh toán", should use @string resource [HardcodedText]
+                android:text="Phương thức thanh toán"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_checkout.xml:182: Warning: Hardcoded string "Thanh toán khi nhận hàng (COD)", should use @string resource [HardcodedText]
+                    android:text="Thanh toán khi nhận hàng (COD)"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_checkout.xml:190: Warning: Hardcoded string "Thanh toán online", should use @string resource [HardcodedText]
+                    android:text="Thanh toán online"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_checkout.xml:209: Warning: Hardcoded string "Tóm tắt đơn hàng", should use @string resource [HardcodedText]
+                android:text="Tóm tắt đơn hàng"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_checkout.xml:224: Warning: Hardcoded string "Tạm tính", should use @string resource [HardcodedText]
+                    android:text="Tạm tính"
+                    ~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_checkout.xml:232: Warning: Hardcoded string "29.990.000 đ", should use @string resource [HardcodedText]
+                    android:text="29.990.000 đ"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_checkout.xml:248: Warning: Hardcoded string "Phí vận chuyển", should use @string resource [HardcodedText]
+                    android:text="Phí vận chuyển"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_checkout.xml:256: Warning: Hardcoded string "30.000 đ", should use @string resource [HardcodedText]
+                    android:text="30.000 đ"
+                    ~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_checkout.xml:277: Warning: Hardcoded string "Tổng cộng", should use @string resource [HardcodedText]
+                    android:text="Tổng cộng"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_checkout.xml:286: Warning: Hardcoded string "30.020.000 đ", should use @string resource [HardcodedText]
+                    android:text="30.020.000 đ"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_checkout.xml:302: Warning: Hardcoded string "Đặt hàng", should use @string resource [HardcodedText]
+            android:text="Đặt hàng"
+            ~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_edit_profile.xml:30: Warning: Hardcoded string "Chỉnh sửa hồ sơ", should use @string resource [HardcodedText]
+            android:text="Chỉnh sửa hồ sơ"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_edit_profile.xml:73: Warning: Hardcoded string "Thay đổi ảnh", should use @string resource [HardcodedText]
+                    android:text="Thay đổi ảnh"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_edit_profile.xml:87: Warning: Hardcoded string "Họ và tên", should use @string resource [HardcodedText]
+                android:hint="Họ và tên"
+                ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_edit_profile.xml:103: Warning: Hardcoded string "Email", should use @string resource [HardcodedText]
+                android:hint="Email"
+                ~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_edit_profile.xml:119: Warning: Hardcoded string "Số điện thoại", should use @string resource [HardcodedText]
+                android:hint="Số điện thoại"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_edit_profile.xml:135: Warning: Hardcoded string "Địa chỉ", should use @string resource [HardcodedText]
+                android:hint="Địa chỉ"
+                ~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_edit_profile.xml:152: Warning: Hardcoded string "Lưu thay đổi", should use @string resource [HardcodedText]
+                android:text="Lưu thay đổi"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_my_orders.xml:30: Warning: Hardcoded string "Đơn hàng của tôi", should use @string resource [HardcodedText]
+            android:text="Đơn hàng của tôi"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_my_orders.xml:76: Warning: Hardcoded string "Chưa có đơn hàng nào", should use @string resource [HardcodedText]
+                android:text="Chưa có đơn hàng nào"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_my_orders.xml:85: Warning: Hardcoded string "Hãy mua sắm và tạo đơn hàng đầu tiên của bạn", should use @string resource [HardcodedText]
+                android:text="Hãy mua sắm và tạo đơn hàng đầu tiên của bạn"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_payment.xml:30: Warning: Hardcoded string "Thanh toán", should use @string resource [HardcodedText]
+            android:text="Thanh toán"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_payment.xml:58: Warning: Hardcoded string "Thông tin thanh toán", should use @string resource [HardcodedText]
+                    android:text="Thông tin thanh toán"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_payment.xml:73: Warning: Hardcoded string "Số tiền thanh toán:", should use @string resource [HardcodedText]
+                        android:text="Số tiền thanh toán:"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_payment.xml:81: Warning: Hardcoded string "30.020.000 đ", should use @string resource [HardcodedText]
+                        android:text="30.020.000 đ"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_payment.xml:93: Warning: Hardcoded string "Thanh toán đơn hàng iPhone 15 Pro Max", should use @string resource [HardcodedText]
+                    android:text="Thanh toán đơn hàng iPhone 15 Pro Max"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_payment.xml:111: Warning: Hardcoded string "Chọn phương thức thanh toán", should use @string resource [HardcodedText]
+                    android:text="Chọn phương thức thanh toán"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_payment.xml:148: Warning: Hardcoded string "Ví MoMo", should use @string resource [HardcodedText]
+                            android:text="Ví MoMo"
+                            ~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_payment.xml:180: Warning: Hardcoded string "ZaloPay", should use @string resource [HardcodedText]
+                            android:text="ZaloPay"
+                            ~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_payment.xml:212: Warning: Hardcoded string "VNPay", should use @string resource [HardcodedText]
+                            android:text="VNPay"
+                            ~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_payment.xml:244: Warning: Hardcoded string "Chuyển khoản ngân hàng", should use @string resource [HardcodedText]
+                            android:text="Chuyển khoản ngân hàng"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_payment.xml:276: Warning: Hardcoded string "Giao dịch được bảo mật bằng SSL 256-bit", should use @string resource [HardcodedText]
+                    android:text="Giao dịch được bảo mật bằng SSL 256-bit"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_payment.xml:293: Warning: Hardcoded string "Thanh toán", should use @string resource [HardcodedText]
+        android:text="Thanh toán"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_product_detail.xml:35: Warning: Hardcoded string "Chi tiết sản phẩm", should use @string resource [HardcodedText]
+                android:text="Chi tiết sản phẩm"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_product_detail.xml:65: Warning: Hardcoded string "-25%", should use @string resource [HardcodedText]
+                android:text="-25%"
+                ~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_product_detail.xml:85: Warning: Hardcoded string "iPhone 15 Pro Max 256GB", should use @string resource [HardcodedText]
+                android:text="iPhone 15 Pro Max 256GB"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_product_detail.xml:100: Warning: Hardcoded string "29.990.000 đ", should use @string resource [HardcodedText]
+                    android:text="29.990.000 đ"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_product_detail.xml:110: Warning: Hardcoded string "39.990.000 đ", should use @string resource [HardcodedText]
+                    android:text="39.990.000 đ"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_product_detail.xml:138: Warning: Hardcoded string "(150 đánh giá)", should use @string resource [HardcodedText]
+                    android:text="(150 đánh giá)"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_product_detail.xml:149: Warning: Hardcoded string "Còn lại: 10 sản phẩm", should use @string resource [HardcodedText]
+                android:text="Còn lại: 10 sản phẩm"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_product_detail.xml:167: Warning: Hardcoded string "Mô tả sản phẩm", should use @string resource [HardcodedText]
+                android:text="Mô tả sản phẩm"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_product_detail.xml:177: Warning: Hardcoded string "iPhone 15 Pro Max với chip A17 Pro mạnh mẽ, camera 48MP chuyên nghiệp và pin lâu dài.", should use @string resource [HardcodedText]
+                android:text="iPhone 15 Pro Max với chip A17 Pro mạnh mẽ, camera 48MP chuyên nghiệp và pin lâu dài."
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_product_detail.xml:195: Warning: Hardcoded string "Số lượng", should use @string resource [HardcodedText]
+                android:text="Số lượng"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_product_detail.xml:218: Warning: Hardcoded string "1", should use @string resource [HardcodedText]
+                    android:text="1"
+                    ~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_product_detail.xml:237: Warning: Hardcoded string "Tổng: 29.990.000 đ", should use @string resource [HardcodedText]
+                android:text="Tổng: 29.990.000 đ"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_product_detail.xml:260: Warning: Hardcoded string "Thêm vào giỏ", should use @string resource [HardcodedText]
+                android:text="Thêm vào giỏ"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\activity_product_detail.xml:272: Warning: Hardcoded string "Mua ngay", should use @string resource [HardcodedText]
+                android:text="Mua ngay"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_cart.xml:13: Warning: Hardcoded string "Giỏ hàng", should use @string resource [HardcodedText]
+        android:text="Giỏ hàng"
+        ~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_cart.xml:91: Warning: Hardcoded string "0đ", should use @string resource [HardcodedText]
+                        android:text="0đ"
+                        ~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_categories.xml:12: Warning: Hardcoded string "Danh mục sản phẩm", should use @string resource [HardcodedText]
+        android:text="Danh mục sản phẩm"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_home.xml:73: Warning: Hardcoded string "Khuyến mãi đặc biệt", should use @string resource [HardcodedText]
+                    android:text="Khuyến mãi đặc biệt"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_home.xml:82: Warning: Hardcoded string "Giảm giá lên đến 50%", should use @string resource [HardcodedText]
+                    android:text="Giảm giá lên đến 50%"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_home.xml:102: Warning: Hardcoded string "Danh mục", should use @string resource [HardcodedText]
+                android:text="Danh mục"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_home.xml:110: Warning: Hardcoded string "Xem tất cả", should use @string resource [HardcodedText]
+                android:text="Xem tất cả"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_home.xml:136: Warning: Hardcoded string "Sản phẩm nổi bật", should use @string resource [HardcodedText]
+                android:text="Sản phẩm nổi bật"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_home.xml:144: Warning: Hardcoded string "Xem tất cả", should use @string resource [HardcodedText]
+                android:text="Xem tất cả"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_profile.xml:50: Warning: Hardcoded string "Tên người dùng", should use @string resource [HardcodedText]
+                        android:text="Tên người dùng"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_profile.xml:60: Warning: Hardcoded string "email@example.com", should use @string resource [HardcodedText]
+                        android:text="email@example.com"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_profile.xml:88: Warning: Hardcoded string "Thông tin cá nhân", should use @string resource [HardcodedText]
+                    android:text="Thông tin cá nhân"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_profile.xml:102: Warning: Hardcoded string "Điện thoại:", should use @string resource [HardcodedText]
+                        android:text="Điện thoại:"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_profile.xml:111: Warning: Hardcoded string "0123456789", should use @string resource [HardcodedText]
+                        android:text="0123456789"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_profile.xml:126: Warning: Hardcoded string "Địa chỉ:", should use @string resource [HardcodedText]
+                        android:text="Địa chỉ:"
+                        ~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_profile.xml:135: Warning: Hardcoded string "Chưa cập nhật", should use @string resource [HardcodedText]
+                        android:text="Chưa cập nhật"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\fragment_profile.xml:255: Warning: Hardcoded string "Đăng nhập / Đăng ký", should use @string resource [HardcodedText]
+                    android:text="Đăng nhập / Đăng ký"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\item_cart.xml:37: Warning: Hardcoded string "Tên sản phẩm", should use @string resource [HardcodedText]
+                android:text="Tên sản phẩm"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\item_cart.xml:47: Warning: Hardcoded string "299.000đ", should use @string resource [HardcodedText]
+                android:text="299.000đ"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\item_cart.xml:78: Warning: Hardcoded string "1", should use @string resource [HardcodedText]
+                        android:text="1"
+                        ~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\item_cart.xml:102: Warning: Hardcoded string "299.000đ", should use @string resource [HardcodedText]
+                    android:text="299.000đ"
+                    ~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\item_category.xml:30: Warning: Hardcoded string "Danh mục", should use @string resource [HardcodedText]
+            android:text="Danh mục"
+            ~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\item_category.xml:41: Warning: Hardcoded string "25 sản phẩm", should use @string resource [HardcodedText]
+            android:text="25 sản phẩm"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\item_order.xml:30: Warning: Hardcoded string "Đơn hàng #12345", should use @string resource [HardcodedText]
+                android:text="Đơn hàng #12345"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\item_order.xml:39: Warning: Hardcoded string "Đang giao", should use @string resource [HardcodedText]
+                android:text="Đang giao"
+                ~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\item_order.xml:54: Warning: Hardcoded string "15/12/2023 14:30", should use @string resource [HardcodedText]
+            android:text="15/12/2023 14:30"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\item_order.xml:92: Warning: Hardcoded string "iPhone 15 Pro Max và 2 sản phẩm khác", should use @string resource [HardcodedText]
+                    android:text="iPhone 15 Pro Max và 2 sản phẩm khác"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\item_order.xml:102: Warning: Hardcoded string "3 sản phẩm", should use @string resource [HardcodedText]
+                    android:text="3 sản phẩm"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\item_order.xml:113: Warning: Hardcoded string "2.500.000đ", should use @string resource [HardcodedText]
+                android:text="2.500.000đ"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\item_product.xml:36: Warning: Hardcoded string "-20%", should use @string resource [HardcodedText]
+                android:text="-20%"
+                ~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\item_product.xml:56: Warning: Hardcoded string "Tên sản phẩm", should use @string resource [HardcodedText]
+                android:text="Tên sản phẩm"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\item_product.xml:81: Warning: Hardcoded string "(150)", should use @string resource [HardcodedText]
+                    android:text="(150)"
+                    ~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\item_product.xml:98: Warning: Hardcoded string "299.000đ", should use @string resource [HardcodedText]
+                    android:text="299.000đ"
+                    ~~~~~~~~~~~~~~~~~~~~~~~
+C:\laragon\www\apk andoir bán hàng\app\src\main\res\layout\item_product.xml:110: Warning: Hardcoded string "399.000đ", should use @string resource [HardcodedText]
+                android:text="399.000đ"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HardcodedText":
+   Hardcoding text attributes directly in layout files is bad for several
+   reasons:
+
+   * When creating configuration variations (for example for landscape or
+   portrait) you have to repeat the actual text (and keep it up to date when
+   making changes)
+
+   * The application cannot be translated to other languages by just adding
+   new translations for existing string resources.
+
+   There are quickfixes to automatically extract this hardcoded string into a
+   resource lookup.
+
+0 errors, 246 warnings

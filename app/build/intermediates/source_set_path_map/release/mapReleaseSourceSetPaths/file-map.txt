@@ -1,0 +1,69 @@
+com.shopapp-lifecycle-livedata-core-ktx-2.7.0-0 C:\Users\cuong\.gradle\caches\transforms-4\16a8e83fe3f33f32f7d808e46d587b70\transformed\lifecycle-livedata-core-ktx-2.7.0\res
+com.shopapp-startup-runtime-1.1.1-1 C:\Users\cuong\.gradle\caches\transforms-4\2396bdb8fc40be2d5f9f92de8cdb5e05\transformed\startup-runtime-1.1.1\res
+com.shopapp-navigation-ui-2.7.6-2 C:\Users\cuong\.gradle\caches\transforms-4\292d4cc625d30f35ff8a8f93288334b6\transformed\navigation-ui-2.7.6\res
+com.shopapp-recyclerview-1.3.2-3 C:\Users\cuong\.gradle\caches\transforms-4\2e1cbed54995b0306bea727818bbf2d5\transformed\recyclerview-1.3.2\res
+com.shopapp-lifecycle-viewmodel-2.7.0-4 C:\Users\cuong\.gradle\caches\transforms-4\2f9b76750bccf2e1d1730c751e305f29\transformed\lifecycle-viewmodel-2.7.0\res
+com.shopapp-lifecycle-livedata-ktx-2.7.0-5 C:\Users\cuong\.gradle\caches\transforms-4\339a47a311b858db1b3f1b0be689c31b\transformed\lifecycle-livedata-ktx-2.7.0\res
+com.shopapp-material-1.11.0-6 C:\Users\cuong\.gradle\caches\transforms-4\37957060992f154e2375ab1e903d705f\transformed\material-1.11.0\res
+com.shopapp-room-runtime-2.6.1-7 C:\Users\cuong\.gradle\caches\transforms-4\3c7c98d1a9b7ca156e0fd2487dd4ceec\transformed\room-runtime-2.6.1\res
+com.shopapp-databinding-runtime-8.4.0-8 C:\Users\cuong\.gradle\caches\transforms-4\438ee06042da6afbc20b9b5ae456682e\transformed\databinding-runtime-8.4.0\res
+com.shopapp-play-services-measurement-api-21.5.0-9 C:\Users\cuong\.gradle\caches\transforms-4\4715e4b0f0840ed572eb675d5ef56132\transformed\play-services-measurement-api-21.5.0\res
+com.shopapp-navigation-common-ktx-2.7.6-10 C:\Users\cuong\.gradle\caches\transforms-4\49ccfe7fff39a21d712531f548204324\transformed\navigation-common-ktx-2.7.6\res
+com.shopapp-cardview-1.0.0-11 C:\Users\cuong\.gradle\caches\transforms-4\4a59d97a21975a5c8ca03378ae581983\transformed\cardview-1.0.0\res
+com.shopapp-activity-1.8.0-12 C:\Users\cuong\.gradle\caches\transforms-4\4b3fb75cb7af5a44cda2d1d16442d830\transformed\activity-1.8.0\res
+com.shopapp-lifecycle-livedata-2.7.0-13 C:\Users\cuong\.gradle\caches\transforms-4\4d3e2a5a99dd7a31c336494f39fb4a76\transformed\lifecycle-livedata-2.7.0\res
+com.shopapp-lifecycle-runtime-2.7.0-14 C:\Users\cuong\.gradle\caches\transforms-4\4d4347ebe7b09e107e72ac12186fdcb6\transformed\lifecycle-runtime-2.7.0\res
+com.shopapp-lifecycle-process-2.7.0-15 C:\Users\cuong\.gradle\caches\transforms-4\5475cb9856f1616b4e79203d41d3c4e9\transformed\lifecycle-process-2.7.0\res
+com.shopapp-core-1.12.0-16 C:\Users\cuong\.gradle\caches\transforms-4\54b080fb6276f2b88813c78424111898\transformed\core-1.12.0\res
+com.shopapp-emoji2-1.2.0-17 C:\Users\cuong\.gradle\caches\transforms-4\55b397ded1bdec46131fae86a3f6e291\transformed\emoji2-1.2.0\res
+com.shopapp-sqlite-2.4.0-18 C:\Users\cuong\.gradle\caches\transforms-4\5e15d4927283c26c78be9aa08dd2b74c\transformed\sqlite-2.4.0\res
+com.shopapp-lifecycle-runtime-ktx-2.7.0-19 C:\Users\cuong\.gradle\caches\transforms-4\6a2de8b688f72c7fa533504c08eae134\transformed\lifecycle-runtime-ktx-2.7.0\res
+com.shopapp-coordinatorlayout-1.1.0-20 C:\Users\cuong\.gradle\caches\transforms-4\6b1b3f83e84f40b50118e868fdd1538a\transformed\coordinatorlayout-1.1.0\res
+com.shopapp-drawerlayout-1.1.1-21 C:\Users\cuong\.gradle\caches\transforms-4\6d2f473c9a53b75c5cbc6ed5e9a3bc32\transformed\drawerlayout-1.1.1\res
+com.shopapp-navigation-runtime-2.7.6-22 C:\Users\cuong\.gradle\caches\transforms-4\71f160ffcd1981b1d445911f43f18cb4\transformed\navigation-runtime-2.7.6\res
+com.shopapp-databinding-adapters-8.4.0-23 C:\Users\cuong\.gradle\caches\transforms-4\72b6bf9db5153f24071d9dda1f8f38d3\transformed\databinding-adapters-8.4.0\res
+com.shopapp-navigation-fragment-2.7.6-24 C:\Users\cuong\.gradle\caches\transforms-4\737d5610f202d40185b1b4d9e5e13af4\transformed\navigation-fragment-2.7.6\res
+com.shopapp-browser-1.4.0-25 C:\Users\cuong\.gradle\caches\transforms-4\75d7609c1f8bc86d2bf3137bc41c9fca\transformed\browser-1.4.0\res
+com.shopapp-core-ktx-1.12.0-26 C:\Users\cuong\.gradle\caches\transforms-4\771361f57e01ec5aec0a878737acf390\transformed\core-ktx-1.12.0\res
+com.shopapp-appcompat-1.6.1-27 C:\Users\cuong\.gradle\caches\transforms-4\796e52847316597d0f01520d0e819327\transformed\appcompat-1.6.1\res
+com.shopapp-fragment-1.6.2-28 C:\Users\cuong\.gradle\caches\transforms-4\7b569f2c5ae7e5d8b4332931d3387a87\transformed\fragment-1.6.2\res
+com.shopapp-emoji2-views-helper-1.2.0-29 C:\Users\cuong\.gradle\caches\transforms-4\853144f813b79c6fa8f9d01d164c3f35\transformed\emoji2-views-helper-1.2.0\res
+com.shopapp-savedstate-1.2.1-30 C:\Users\cuong\.gradle\caches\transforms-4\9190c46edfbab83af917dd7727a4d141\transformed\savedstate-1.2.1\res
+com.shopapp-ads-adservices-java-1.0.0-beta05-31 C:\Users\cuong\.gradle\caches\transforms-4\91a3c9aaa6b98f367016b03a3976a806\transformed\ads-adservices-java-1.0.0-beta05\res
+com.shopapp-slidingpanelayout-1.2.0-32 C:\Users\cuong\.gradle\caches\transforms-4\923083d5a9daf4890e8ed356ee21a1c1\transformed\slidingpanelayout-1.2.0\res
+com.shopapp-window-1.0.0-33 C:\Users\cuong\.gradle\caches\transforms-4\9938276e97e77724bb15c7343ed3504d\transformed\window-1.0.0\res
+com.shopapp-constraintlayout-2.1.4-34 C:\Users\cuong\.gradle\caches\transforms-4\9a8595433aa6be71a388b43658609b90\transformed\constraintlayout-2.1.4\res
+com.shopapp-profileinstaller-1.3.0-35 C:\Users\cuong\.gradle\caches\transforms-4\9dbea4d52f32042c18b07c52abc2528c\transformed\profileinstaller-1.3.0\res
+com.shopapp-navigation-common-2.7.6-36 C:\Users\cuong\.gradle\caches\transforms-4\9f350769ceadd9beaa9e79c58f0bb4a9\transformed\navigation-common-2.7.6\res
+com.shopapp-navigation-fragment-ktx-2.7.6-37 C:\Users\cuong\.gradle\caches\transforms-4\aa7dff2b28baff533c38d471173075f9\transformed\navigation-fragment-ktx-2.7.6\res
+com.shopapp-play-services-basement-18.1.0-38 C:\Users\cuong\.gradle\caches\transforms-4\ab41159dfdfb1fcc49ea4a11838d3852\transformed\play-services-basement-18.1.0\res
+com.shopapp-appcompat-resources-1.6.1-39 C:\Users\cuong\.gradle\caches\transforms-4\b4c7ea2077b9d5ac0ef6a385d12329e9\transformed\appcompat-resources-1.6.1\res
+com.shopapp-annotation-experimental-1.3.0-40 C:\Users\cuong\.gradle\caches\transforms-4\b9fede4b9c4bb5ccd283e593aa0a546a\transformed\annotation-experimental-1.3.0\res
+com.shopapp-savedstate-ktx-1.2.1-41 C:\Users\cuong\.gradle\caches\transforms-4\bd8623935cb430959f884304f4745b00\transformed\savedstate-ktx-1.2.1\res
+com.shopapp-firebase-common-20.4.2-42 C:\Users\cuong\.gradle\caches\transforms-4\beb0cf1e607783fa63a624502b9911a7\transformed\firebase-common-20.4.2\res
+com.shopapp-ads-adservices-1.0.0-beta05-43 C:\Users\cuong\.gradle\caches\transforms-4\c0c51c2d6910f45885ddfef05c57cee5\transformed\ads-adservices-1.0.0-beta05\res
+com.shopapp-lifecycle-service-2.7.0-44 C:\Users\cuong\.gradle\caches\transforms-4\c3733191c6e6857becf375c914bfd12b\transformed\lifecycle-service-2.7.0\res
+com.shopapp-navigation-runtime-ktx-2.7.6-45 C:\Users\cuong\.gradle\caches\transforms-4\c7ba16e9f0a55c02c0cb20c1397de4f7\transformed\navigation-runtime-ktx-2.7.6\res
+com.shopapp-room-ktx-2.6.1-46 C:\Users\cuong\.gradle\caches\transforms-4\c7e01aa8dd156630733206b1daa405ce\transformed\room-ktx-2.6.1\res
+com.shopapp-navigation-ui-ktx-2.7.6-47 C:\Users\cuong\.gradle\caches\transforms-4\d1daff909d1af56c13ecc2eec9d429e0\transformed\navigation-ui-ktx-2.7.6\res
+com.shopapp-activity-ktx-1.8.0-48 C:\Users\cuong\.gradle\caches\transforms-4\dd4b73e28473c90c28a120b17b05ab9c\transformed\activity-ktx-1.8.0\res
+com.shopapp-core-runtime-2.2.0-49 C:\Users\cuong\.gradle\caches\transforms-4\dffb70ba28191ad7ac4069b7919c9382\transformed\core-runtime-2.2.0\res
+com.shopapp-glide-4.16.0-50 C:\Users\cuong\.gradle\caches\transforms-4\e0ce1f1df35a28f85a08df5ed1ac74a8\transformed\glide-4.16.0\res
+com.shopapp-lifecycle-viewmodel-savedstate-2.7.0-51 C:\Users\cuong\.gradle\caches\transforms-4\e18f687873c889988addeca0b9df30a1\transformed\lifecycle-viewmodel-savedstate-2.7.0\res
+com.shopapp-lifecycle-viewmodel-ktx-2.7.0-52 C:\Users\cuong\.gradle\caches\transforms-4\ec5a87c9b2a4720189920c32aca4d79e\transformed\lifecycle-viewmodel-ktx-2.7.0\res
+com.shopapp-lifecycle-livedata-core-2.7.0-53 C:\Users\cuong\.gradle\caches\transforms-4\ec8eb78bb6e5cb360a54620ac6b37109\transformed\lifecycle-livedata-core-2.7.0\res
+com.shopapp-customview-poolingcontainer-1.0.0-54 C:\Users\cuong\.gradle\caches\transforms-4\efdd2a1987897ce9b167cbee6fda8dfb\transformed\customview-poolingcontainer-1.0.0\res
+com.shopapp-viewpager2-1.1.0-beta02-55 C:\Users\cuong\.gradle\caches\transforms-4\f450b69aadd6708ce7f5c9521e95849a\transformed\viewpager2-1.1.0-beta02\res
+com.shopapp-fragment-ktx-1.6.2-56 C:\Users\cuong\.gradle\caches\transforms-4\f4efcd42117ff6fb59d008bdf0b4e105\transformed\fragment-ktx-1.6.2\res
+com.shopapp-play-services-base-18.0.1-57 C:\Users\cuong\.gradle\caches\transforms-4\f65f52534fe42a4ec928f3b68cf5def9\transformed\play-services-base-18.0.1\res
+com.shopapp-transition-1.4.1-58 C:\Users\cuong\.gradle\caches\transforms-4\f69504ac9c6c94066f77a2b1e996a674\transformed\transition-1.4.1\res
+com.shopapp-sqlite-framework-2.4.0-59 C:\Users\cuong\.gradle\caches\transforms-4\f85de87f15fe62a5a340e86498175948\transformed\sqlite-framework-2.4.0\res
+com.shopapp-circleimageview-3.1.0-60 C:\Users\cuong\.gradle\caches\transforms-4\fce2fca45627e256a311b6aa17be5c38\transformed\circleimageview-3.1.0\res
+com.shopapp-pngs-61 C:\laragon\www\apk andoir bán hàng\app\build\generated\res\pngs\release
+com.shopapp-res-62 C:\laragon\www\apk andoir bán hàng\app\build\generated\res\processReleaseGoogleServices
+com.shopapp-resValues-63 C:\laragon\www\apk andoir bán hàng\app\build\generated\res\resValues\release
+com.shopapp-packageReleaseResources-64 C:\laragon\www\apk andoir bán hàng\app\build\intermediates\incremental\release\packageReleaseResources\merged.dir
+com.shopapp-packageReleaseResources-65 C:\laragon\www\apk andoir bán hàng\app\build\intermediates\incremental\release\packageReleaseResources\stripped.dir
+com.shopapp-release-66 C:\laragon\www\apk andoir bán hàng\app\build\intermediates\merged_res\release\mergeReleaseResources
+com.shopapp-main-67 C:\laragon\www\apk andoir bán hàng\app\src\main\res
+com.shopapp-release-68 C:\laragon\www\apk andoir bán hàng\app\src\release\res

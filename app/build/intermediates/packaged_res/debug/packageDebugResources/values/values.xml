@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent">#FFFF5722</color>
+    <color name="background">#FFF5F5F5</color>
+    <color name="background_color">@color/background</color>
+    <color name="black">#FF000000</color>
+    <color name="blue">#FF2196F3</color>
+    <color name="button_primary">#FF2196F3</color>
+    <color name="button_secondary">#FFE0E0E0</color>
+    <color name="button_text_primary">#FFFFFFFF</color>
+    <color name="button_text_secondary">#FF212121</color>
+    <color name="card_background">#FFFFFFFF</color>
+    <color name="card_shadow">#1F000000</color>
+    <color name="divider_color">#FFE0E0E0</color>
+    <color name="error">#FFFF5252</color>
+    <color name="gray">#FF9E9E9E</color>
+    <color name="green">#FF4CAF50</color>
+    <color name="orange">#FFFF9800</color>
+    <color name="orange_light">#FFFFF3E0</color>
+    <color name="primary">#FF2196F3</color>
+    <color name="primary_color">@color/primary</color>
+    <color name="primary_dark">#FF1976D2</color>
+    <color name="purple">#FF9C27B0</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="red">#FFF44336</color>
+    <color name="success">#FF4CAF50</color>
+    <color name="success_color">@color/success</color>
+    <color name="surface">#FFFFFFFF</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="text_hint">#FFBDBDBD</color>
+    <color name="text_primary">#FF212121</color>
+    <color name="text_secondary">#FF757575</color>
+    <color name="warning">#FFFF9800</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="add_to_cart">Thêm vào giỏ</string>
+    <string name="address">Địa chỉ</string>
+    <string name="already_have_account">Đã có tài khoản?</string>
+    <string name="app_name">Shop App</string>
+    <string name="buy_now">Mua ngay</string>
+    <string name="cancel">Hủy</string>
+    <string name="cart_empty">Giỏ hàng trống</string>
+    <string name="checkout">Thanh toán</string>
+    <string name="confirm_password">Xác nhận mật khẩu</string>
+    <string name="default_web_client_id" translatable="false">123456789-abcdef.apps.googleusercontent.com</string>
+    <string name="description">Mô tả</string>
+    <string name="dont_have_account">Chưa có tài khoản?</string>
+    <string name="edit_profile">Chỉnh sửa hồ sơ</string>
+    <string name="email">Email</string>
+    <string name="error">Lỗi</string>
+    <string name="filter">Lọc</string>
+    <string name="forgot_password">Quên mật khẩu?</string>
+    <string name="full_name">Họ và tên</string>
+    <string name="gcm_defaultSenderId" translatable="false">123456789</string>
+    <string name="google_api_key" translatable="false">AIzaSyDemoKeyForShopApp123456789</string>
+    <string name="google_app_id" translatable="false">1:123456789:android:abcdef123456</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDemoKeyForShopApp123456789</string>
+    <string name="google_storage_bucket" translatable="false">shopapp-demo.appspot.com</string>
+    <string name="in_stock">Còn hàng</string>
+    <string name="loading">Đang tải...</string>
+    <string name="login">Đăng nhập</string>
+    <string name="logout">Đăng xuất</string>
+    <string name="my_orders">Đơn hàng của tôi</string>
+    <string name="nav_cart">Giỏ hàng</string>
+    <string name="nav_categories">Danh mục</string>
+    <string name="nav_home">Trang chủ</string>
+    <string name="nav_profile">Hồ sơ</string>
+    <string name="ok">OK</string>
+    <string name="order_status_cancelled">Đã hủy</string>
+    <string name="order_status_confirmed">Đã xác nhận</string>
+    <string name="order_status_delivered">Đã giao</string>
+    <string name="order_status_pending">Chờ xử lý</string>
+    <string name="order_status_shipping">Đang giao</string>
+    <string name="out_of_stock">Hết hàng</string>
+    <string name="password">Mật khẩu</string>
+    <string name="phone">Số điện thoại</string>
+    <string name="price">Giá:</string>
+    <string name="project_id" translatable="false">shopapp-demo</string>
+    <string name="quantity">Số lượng</string>
+    <string name="register">Đăng ký</string>
+    <string name="remove">Xóa</string>
+    <string name="save">Lưu</string>
+    <string name="search">Tìm kiếm</string>
+    <string name="sort">Sắp xếp</string>
+    <string name="total">Tổng cộng</string>
+    <style name="ButtonPrimary" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/button_primary</item>
+        <item name="android:textColor">@color/button_text_primary</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="ButtonSecondary" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="strokeColor">@color/button_primary</item>
+        <item name="android:textColor">@color/button_primary</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="CardStyle" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">@color/card_background</item>
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+    <style name="TextPrice" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:textColor">@color/accent</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextSubtitle" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+    <style name="TextTitle" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="Theme.ShopApp" parent="Theme.Material3.DayNight">
+        
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <item name="colorSecondary">@color/accent</item>
+        <item name="colorSecondaryVariant">@color/accent</item>
+        <item name="colorOnSecondary">@color/white</item>
+        
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        
+        <item name="android:windowBackground">@color/background</item>
+    </style>
+    <style name="Theme.ShopApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="Theme.ShopApp.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.ShopApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+</resources>
