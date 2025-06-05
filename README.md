@@ -27,17 +27,20 @@
 ## Cài đặt và chạy
 
 ### Yêu cầu hệ thống
+
 - Android Studio Arctic Fox hoặc mới hơn
 - Android SDK 24 trở lên
 - JDK 8 trở lên
 
 ### Bước 1: Clone dự án
+
 ```bash
 git clone <repository-url>
 cd apk-andoir-ban-hang
 ```
 
 ### Bước 2: Cấu hình Firebase
+
 1. Tạo project mới trên [Firebase Console](https://console.firebase.google.com/)
 2. Thêm Android app với package name: `com.shopapp`
 3. Tải file `google-services.json` và thay thế file hiện tại trong thư mục `app/`
@@ -46,13 +49,16 @@ cd apk-andoir-ban-hang
 6. Cấu hình Storage
 
 ### Bước 3: Cấu hình Android SDK
+
 1. Mở file `local.properties`
 2. Cập nhật đường dẫn SDK:
+
 ```properties
-sdk.dir=C\:\\Users\\YourUsername\\AppData\\Local\\Android\\Sdk
+sdk.dir=C\:\\Users\\cuong\\AppData\\Local\\Android\\Sdk
 ```
 
 ### Bước 4: Build và chạy
+
 1. Mở project trong Android Studio
 2. Sync project với Gradle files
 3. Chạy ứng dụng trên emulator hoặc thiết bị thật
@@ -105,5 +111,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Liên hệ
 
-Email: developer@shopapp.com
-Project Link: [https://github.com/username/shopapp](https://github.com/username/shopapp)
+Email: cuonghotran17022004@gmail.com  
+Phone Or Zalo : 0355999141
+Project Link: [https://github.com/cuonghoakim/shopapp](https://github.com/cuonghoakim/shopapp)
